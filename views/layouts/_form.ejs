@@ -1,0 +1,40 @@
+ <!-- form handling -->
+ <form action="/api/students" method="POST" id="add_user">
+    <div class="new_user">
+        <div class="form-group">
+            <label for="rollNumber" class="text-light">rollNumber</label>
+            <input type="text" name="rollNumber" value="" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="Name" class="text-light">Name</label>
+            <input type="text" name="Name" value="" placeholder="">
+        </div>
+
+        <div class="form-group">
+            <label for="DOB" class="text-light">DOB <sup>[dd-mm-yyyy format]</sup></label>
+            <input type="text" name="DOB" value="" placeholder="">
+        </div>
+
+        <div class="form-group">
+            <label for="score" class="text-light">score</label>
+            <input type="text" name="score" value="" placeholder="">
+        </div>
+
+        <div class="form-group">
+            <label for="result" class="text-light">Result</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="result" value="Pass" >
+                <label for="radio-2" class="radio-label">Pass</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="result" value="Fail" >
+                <label for="radio-3" class="radio-label">Fail</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+
+    </div>
+</form>

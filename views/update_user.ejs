@@ -1,0 +1,67 @@
+
+<!-- include header -->
+<%- include('layouts/_header') %>
+<!-- /include header -->
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+           <div class="filter">
+               <a href="/"><i class="fas fa-angle-double-left"></i> All Users</a>
+           </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Update student</h2>
+            <span class="text-light">Use the below form to Update entry</span>
+        </div>
+
+        <!-- add user form -->
+         <!-- form handling -->
+ <form method="POST" id="update_user">
+    <div class="new_user">
+        <div class="form-group">
+            <label for="rollNumber" class="text-light">rollNumber</label>
+            <input type="hidden" name="id" value="<%= user._id %>">
+            <input type="text" name="rollNumber" value="<%= user.rollNumber %>" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="Name" class="text-light">Name</label>
+            <input type="text" name="Name" value="<%= user.Name %>" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="DOB" class="text-light">DOB<sup>[dd-mm-yyyy format]</sub></label>
+            <input type="text" name="DOB" value="<%= user.DOB%>" placeholder="">
+        </div>
+
+        <div class="form-group">
+            <label for="score" class="text-light">score</label>
+            <input type="text" name="score" value="<%= user.score %>" placeholder="">
+        </div>
+
+        <div class="form-group">
+            <label for="result" class="text-light">Result</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="result" value="Pass" >
+                <label for="radio-2" class="radio-label">Pass</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="result" value="Fail" >
+                <label for="radio-3" class="radio-label">Fail</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+
+    </div>
+</form>
+       
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('layouts/_footer') %>
+<!-- /include footer -->
